@@ -375,8 +375,8 @@
     display:grid;grid-template-columns:repeat(3,1fr);gap:26px;align-items:stretch;
   }
   .plan{
-    border-radius:14px;overflow:hidden;display:flex;flex-direction:column;
-    box-shadow:0 8px 24px rgba(15,40,80,.10);
+    border-radius:12px;overflow:hidden;display:flex;flex-direction:column;
+    box-shadow:0 3px 10px rgba(15,40,80,.07);
   }
   /* Featured navy plan */
   .plan-featured{
@@ -399,10 +399,10 @@
   .plan-featured .ribbon::after{right:-16px;border-left-color:#a80f18;}
   .plan-featured .pf-body{flex:1;padding:14px 24px 18px;display:flex;flex-direction:column;justify-content:center;}
   .plan-featured .pf-big{
-    font-weight:900;font-size:56px;line-height:1.0;text-transform:uppercase;letter-spacing:.5px;
+    font-weight:900;font-size:62px;line-height:.94;text-transform:uppercase;letter-spacing:0;
   }
   .plan-featured .pf-included{
-    font-weight:900;font-size:26px;text-transform:uppercase;letter-spacing:1px;margin-top:6px;
+    font-weight:900;font-size:28px;text-transform:uppercase;letter-spacing:1px;margin-top:8px;
   }
   .plan-featured .pf-note{
     font-size:13.5px;font-weight:500;opacity:.9;margin-top:16px;line-height:1.5;
@@ -416,12 +416,14 @@
   .plan-white{background:#fff;border:1.5px solid var(--border);}
   .plan-white .pw-header{
     color:#fff;text-align:center;font-weight:800;text-transform:uppercase;
-    font-size:20px;line-height:1.25;letter-spacing:.5px;
-    padding:14px 12px;
+    font-size:19px;line-height:1.25;letter-spacing:.5px;
+    padding:12px 10px;
+    margin:10px 10px 0;
+    border-radius:8px;
   }
   .plan-white .pw-header.navy{background:var(--navy);}
   .plan-white .pw-header.red{background:var(--red-bright);}
-  .plan-white .pw-body{padding:22px 28px 26px;flex:1;display:flex;flex-direction:column;}
+  .plan-white .pw-body{padding:20px 28px 26px;flex:1;display:flex;flex-direction:column;}
   .plan-white .pw-startingat{font-weight:600;font-size:15px;color:#33415c;}
   .plan-white .pw-price{
     display:flex;align-items:baseline;gap:2px;line-height:1;margin:6px 0 4px;
