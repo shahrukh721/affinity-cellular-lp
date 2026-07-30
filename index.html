@@ -3,7 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0e2a5c">
 <title>Affinity Cellular — Try 3 Months FREE | Plans from $15/mo</title>
+<link rel="preload" as="image" href="images/hero-couple.jpg" media="(min-width: 761px)">
+<link rel="preload" as="image" href="images/hero-couple-mobile.jpg" media="(max-width: 760px)">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,800;1,900&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
@@ -530,6 +533,7 @@
   .legal-links a{
     color:#fff;text-decoration:none;
     font-weight:700;font-size:14px;letter-spacing:.3px;
+    padding:8px 4px;display:inline-block;
   }
   .legal-links a:hover{text-decoration:underline;}
   .legal-links .dot{width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,.5);}
@@ -556,16 +560,31 @@
     .step-arrow{display:none;}
     .t-cards{grid-template-columns:1fr;}
     .pricing-row{grid-template-columns:1fr;max-width:460px;margin:0 auto;}
-    .call-band-inner{flex-direction:column;align-items:flex-start;}
-    .call-brand{flex:0 0 auto;width:100%;padding:26px 0 6px;}
-    .call-brand::before{left:-100vw;top:auto;height:200%;transform:none;}
+    .call-band-inner{flex-direction:column;align-items:center;text-align:center;gap:24px;padding-bottom:0;}
+    .call-left{flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:16px;}
+    .call-copy .call-site{justify-content:center;}
+    .call-qr{justify-content:center;}
+    .call-qr .qr-label{text-align:left;}
+    .call-brand{
+      flex:0 0 auto;
+      width:calc(100% + 48px);margin:0 -24px;
+      background:#1c4489;
+      padding:28px 24px 32px;
+    }
+    .call-brand::before{display:none;}
   }
   @media (max-width:760px){
     .header-inner{flex-wrap:wrap;justify-content:center;text-align:center;}
     .hamburger{position:absolute;right:18px;top:18px;}
     .site-header{position:relative;}
     .hero-inner{grid-template-columns:1fr;}
-    .hero-photo{position:relative;width:100%;height:340px;order:2;}
+    .hero-photo{
+      position:relative;width:100%;height:340px;
+      background:url('images/hero-couple-mobile.jpg') center 30%/cover no-repeat;
+    }
+    .hero-photo::before{
+      background:linear-gradient(180deg,rgba(242,247,252,0) 72%,#f2f7fc 100%);
+    }
     .hero-right{min-height:0;display:flex;flex-direction:column;align-items:center;gap:18px;}
     .badge-years{position:relative;top:auto;right:auto;}
     .price-card{position:static;}
@@ -590,6 +609,8 @@
     .plan-featured .pf-big{font-size:46px;}
     .trust-row{grid-template-columns:1fr;row-gap:18px;}
     .trust-item + .trust-item{border-left:0;}
+    .trust-item{width:100%;max-width:320px;margin:0 auto;justify-content:flex-start;}
+    .call-copy .call-num{font-size:38px;}
     .feature + .feature{border-left:0;}
     .features-row{grid-template-columns:1fr;}
   }
@@ -740,12 +761,12 @@
   <div class="container">
     <div class="press-title">As Seen In and Featured On</div>
     <div class="press-logos">
-      <img class="plogo-img" src="images/logo-aarp.svg" alt="AARP" style="height:30px">
-      <img class="plogo-img" src="images/logo-forbes.svg" alt="Forbes" style="height:26px">
-      <img class="plogo-img" src="images/logo-usatoday.svg" alt="USA Today" style="height:34px">
-      <img class="plogo-img" src="images/logo-cr.svg" alt="Consumer Reports" style="height:34px">
-      <img class="plogo-img" src="images/logo-marketwatch.svg" alt="MarketWatch" style="height:22px">
-      <img class="plogo-img" src="images/logo-usnews.svg" alt="U.S. News &amp; World Report" style="height:26px">
+      <img class="plogo-img" loading="lazy" src="images/logo-aarp.svg" alt="AARP" style="height:30px">
+      <img class="plogo-img" loading="lazy" src="images/logo-forbes.svg" alt="Forbes" style="height:26px">
+      <img class="plogo-img" loading="lazy" src="images/logo-usatoday.svg" alt="USA Today" style="height:34px">
+      <img class="plogo-img" loading="lazy" src="images/logo-cr.svg" alt="Consumer Reports" style="height:34px">
+      <img class="plogo-img" loading="lazy" src="images/logo-marketwatch.svg" alt="MarketWatch" style="height:22px">
+      <img class="plogo-img" loading="lazy" src="images/logo-usnews.svg" alt="U.S. News &amp; World Report" style="height:26px">
     </div>
   </div>
 </section>
@@ -1018,7 +1039,7 @@
       </div>
       <div class="call-qr">
         <div class="qr-box">
-          <img src="images/qr-code.png" alt="QR code — scan to learn more at AffinityCellular.com">
+          <img loading="lazy" width="82" height="82" src="images/qr-code.png" alt="QR code — scan to learn more at AffinityCellular.com">
         </div>
         <div>
           <div class="qr-label">Scan to<br>Learn More</div>
