@@ -801,7 +801,12 @@
       </div>
       <p><span class="hurry">Hurry!</span> This offer won't last forever. 3 free months are only available for a limited time.</p>
     </div>
-    <div class="cd-static-msg">Available to new customers only &mdash; while this promotion lasts.</div>
+    <div class="countdown-timer" id="countdown" aria-live="off">
+      <div class="cd-unit"><div class="cd-num" id="cd-days">02</div><div class="cd-label">Days</div></div>
+      <div class="cd-unit"><div class="cd-num" id="cd-hrs">14</div><div class="cd-label">Hrs</div></div>
+      <div class="cd-unit"><div class="cd-num" id="cd-min">37</div><div class="cd-label">Min</div></div>
+      <div class="cd-unit"><div class="cd-num" id="cd-sec">26</div><div class="cd-label">Sec</div></div>
+    </div>
   </div>
 </section>
 
@@ -1189,5 +1194,30 @@
   </div>
 </footer>
 
+<script>
+  // Countdown — starts at 2d 14h 37m 26s to mirror the design; persists per visitor.
+  (function(){
+    var KEY='affinity-offer-deadline';
+    var deadline=parseInt(localStorage.getItem(KEY),10);
+    if(!deadline||deadline<Date.now()){
+      deadline=Date.now()+((2*24*3600+14*3600+37*60+26)*1000);
+      localStorage.setItem(KEY,String(deadline));
+    }
+    var $d=document.getElementById('cd-days'),
+        $h=document.getElementById('cd-hrs'),
+        $m=document.getElementById('cd-min'),
+        $s=document.getElementById('cd-sec');
+    function pad(n){return (n<10?'0':'')+n;}
+    function tick(){
+      var left=Math.max(0,Math.floor((deadline-Date.now())/1000));
+      $d.textContent=pad(Math.floor(left/86400));
+      $h.textContent=pad(Math.floor(left%86400/3600));
+      $m.textContent=pad(Math.floor(left%3600/60));
+      $s.textContent=pad(left%60);
+    }
+    tick();
+    setInterval(tick,1000);
+  })();
+</script>
 </body>
 </html>
