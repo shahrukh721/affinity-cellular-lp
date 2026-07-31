@@ -135,12 +135,14 @@
   .hero-free{
     color:var(--red-bright);
     font-weight:900;
-    font-size:82px;
+    font-size:74px;
     line-height:.95;
-    letter-spacing:1px;
+    letter-spacing:.5px;
+    white-space:nowrap;
   }
+  .hero-free .hero-price-mo{font-size:.42em;letter-spacing:0;}
   .hero-free-months{
-    font-weight:800;font-size:27px;color:var(--red-bright);text-transform:uppercase;
+    font-weight:800;font-size:24px;color:var(--red-bright);text-transform:uppercase;
     line-height:1.05;
   }
   .hero-checks{list-style:none;margin:6px 0 20px;}
@@ -658,7 +660,8 @@
     .price-card{position:static;}
     .hero-h1{font-size:36px;}
     .hero-free-line{flex-wrap:wrap;gap:10px;}
-    .hero-free{font-size:58px;}
+    .hero-free{font-size:clamp(30px,13vw,58px);}
+    .hero-try{font-size:clamp(18px,7vw,30px);}
     .hero-free-months{font-size:22px;}
     .hero-try{font-size:24px;}
     .hero-offer .offer-title{font-size:16px;}
@@ -736,13 +739,13 @@
       <div class="hero-divider"></div>
       <div class="hero-try">Try Affinity Cellular</div>
       <div class="hero-free-line">
-        <span class="hero-free">FREE</span>
-        <span class="hero-free-months">for 3 months!*</span>
+        <span class="hero-free">ONLY $15<span class="hero-price-mo">/mo.</span></span>
+        <span class="hero-free-months">+ FREE for 3 months!*</span>
       </div>
       <ul class="hero-checks">
         <li>
           <svg viewBox="0 0 24 24" fill="none" stroke="#12336e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" stroke-width="2"/><path d="M8 12.5l2.6 2.6L16 9.5"/></svg>
-          Same Reliable Nationwide Network
+          Same Reliable Network &mdash; Only $15 a Month
         </li>
         <li>
           <svg viewBox="0 0 24 24" fill="none" stroke="#12336e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" stroke-width="2"/><path d="M8 12.5l2.6 2.6L16 9.5"/></svg>
@@ -765,7 +768,7 @@
         </div>
       </div>
       <a class="btn-cta" href="#" data-qualify>
-        <span class="cta-main">Get Started Now</span>
+        <span class="cta-main">Get Started for $15 Now</span>
         <span class="cta-sub">Lock In Your 3 Free Months &raquo;</span>
       </a>
     </div>
@@ -809,13 +812,6 @@
         <div class="badge-ribbon">Of Trusted<br>Service</div>
       </div>
 
-      <div class="price-card">
-        <div class="pc-label">Plans starting as low as</div>
-        <div class="pc-price">
-          <span class="pc-currency">$</span><span class="pc-amount">15</span><span class="pc-per">/mo.</span>
-        </div>
-        <div class="pc-after">After 3 months</div>
-      </div>
     </div>
   </div>
 </section>
@@ -829,7 +825,7 @@
           <circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.6 2.6"/><path d="M9 3h6"/>
         </svg>
       </div>
-      <p><span class="hurry">Hurry!</span> This offer won't last forever. 3 free months are only available for a limited time.</p>
+      <p><span class="hurry">Hurry!</span> This offer won't last forever. 3 free months are only available for a limited time &mdash; then just $15/mo.</p>
     </div>
     <div class="countdown-timer" id="countdown" aria-live="off">
       <div class="cd-unit"><div class="cd-num" id="cd-days">02</div><div class="cd-label">Days</div></div>
@@ -1114,7 +1110,7 @@
         <svg viewBox="0 0 24 24" fill="#fff"><path d="M6.6 2.8c.6-.6 1.6-.5 2.1.2l2.1 2.9c.4.6.4 1.4-.1 1.9l-1.3 1.3a14.4 14.4 0 005.5 5.5l1.3-1.3c.5-.5 1.3-.5 1.9-.1l2.9 2.1c.7.5.8 1.5.2 2.1l-1.6 1.6c-.7.7-1.7 1-2.6.7-6.5-1.9-11.6-7-13.5-13.5-.3-.9 0-1.9.7-2.6l1.6-1.6z"/></svg>
       </div>
       <div class="call-copy">
-        <div class="call-easy">Call Today &ndash; It's Easy!</div>
+        <div class="call-easy">Call Today &ndash; Plans From Just $15/mo.!</div>
         <a class="call-num" href="tel:8557638221">855-763-8221</a>
         <div class="call-site">
           <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.4 4 5.6 4 9s-1.5 6.6-4 9c-2.5-2.4-4-5.6-4-9s1.5-6.6 4-9z"/></svg>
