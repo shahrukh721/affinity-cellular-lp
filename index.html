@@ -577,6 +577,12 @@
   .lead-modal-close:hover{background:var(--red-bright);}
   .lead-modal-body{padding:10px;overflow-y:auto;}
   .lead-modal-body iframe{width:100%;height:467px;border:none;border-radius:8px;display:block;}
+  .lead-modal-head .lm-sub{display:block;font-size:12px;font-weight:600;color:#c9d5e3;letter-spacing:.2px;margin-top:4px;}
+  .lead-modal-foot{
+    display:flex;align-items:center;justify-content:center;gap:7px;
+    padding:4px 14px 14px;font-size:12px;color:#5d6a78;text-align:center;
+  }
+  .lead-modal-foot a{color:#5d6a78;text-decoration:underline;}
   body.lead-modal-open{overflow:hidden;}
 
   /* ============ STICKY URGENCY BAR ============ */
@@ -1250,6 +1256,7 @@
   <div class="lead-modal-card">
     <div class="lead-modal-head">
       CHECK IF YOU QUALIFY FOR THIS OFFER
+      <span class="lm-sub">3 Months FREE for qualifying new customers &mdash; takes about 30 seconds</span>
       <button class="lead-modal-close" data-close-modal aria-label="Close">&times;</button>
     </div>
     <div class="lead-modal-body">
@@ -1270,6 +1277,9 @@
         data-form-id="lugGPdmetpkZ9u6yAGf1"
         title="Form 1">
       </iframe>
+    <div class="lead-modal-foot">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#5d6a78" stroke-width="2"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+      <span>Your information is secure and handled per our <a href="privacy-policy.html">Privacy Policy</a>. No obligation.</span>
     </div>
   </div>
 </div>
